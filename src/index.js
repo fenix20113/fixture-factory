@@ -161,7 +161,7 @@ class FixtureFactory extends EventEmitter {
     });
 
     if (!Object.keys(fixture).length) {
-      const fieldModel = this._getFieldModel(name);
+      const fieldModel = this._parseFieldModel(name);
       if (typeof fieldModel.method === 'string') {
         fixture = this._handleString(fieldModel);
       }

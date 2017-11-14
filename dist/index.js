@@ -177,7 +177,7 @@ var FixtureFactory = (function (_EventEmitter) {
       });
 
       if (!Object.keys(fixture).length) {
-        var fieldModel = this._getFieldModel(name);
+        var fieldModel = this._parseFieldModel(name);
         if (typeof fieldModel.method === 'string') {
           fixture = this._handleString(fieldModel);
         }
